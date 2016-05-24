@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
     });
   })
 
-.config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -62,4 +62,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/map');
 
-});
+})
+  
+  .constant('SERVER', {
+    // Local server
+    url: 'http://localhost:5000'
+
+    // Public Heroku server
+    //url: 'https://ionic-songhop.herokuapp.com'
+  });
